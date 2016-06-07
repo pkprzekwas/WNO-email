@@ -11,9 +11,9 @@ from config import CONFIG, TEXT
 def prepare_msg(text, format='html', image_path=None):
     msg = MIMEMultipart()
     msg_alternative = MIMEMultipart('alternative')
-    msg_text = MIMEText(text, image_path, format)
+    msg_text = MIMEText(text, format)
     msg_alternative.attach(msg_text)
-    fp = open('se.png', 'rb')
+    fp = open(image_path, 'rb')
     msg_image = MIMEImage(fp.read())
     fp.close()
     msg_image.add_header('Content-ID', '<image1>')
