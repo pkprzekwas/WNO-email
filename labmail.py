@@ -8,10 +8,10 @@ from email.mime.multipart import MIMEMultipart
 from config import CONFIG, TEXT
 
 
-def prepare_msg(tekst, format='html', image_path=None):
+def prepare_msg(text, format='html', image_path=None):
     msg = MIMEMultipart()
     msg_alternative = MIMEMultipart('alternative')
-    msg_text = MIMEText(image_path, 'html')
+    msg_text = MIMEText(text, image_path, format)
     msg_alternative.attach(msg_text)
     fp = open('se.png', 'rb')
     msg_image = MIMEImage(fp.read())
