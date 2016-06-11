@@ -1,6 +1,6 @@
 CONFIG = {
-    'your-mail': 'mail-2@gmail.com',
-    'my-mail': 'mail-1@gmail.com',
+    'your-mail': 'mail-1@gmail.com',
+    'my-mail': 'mail-2@gmail.com',
     'super-secret-pass': '<pass>',
 }
 

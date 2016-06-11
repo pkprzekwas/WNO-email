@@ -8,16 +8,17 @@ from email.mime.multipart import MIMEMultipart
 from config import CONFIG, TEXT
 
 
-def prepare_msg(text, format='html', image_path=None):
+def prepare_msg(text, _format='html', image_path=None):
     msg = MIMEMultipart()
     msg_alternative = MIMEMultipart('alternative')
-    msg_text = MIMEText(text, format)
-    msg_alternative.attach(msg_text)
     fp = open(image_path, 'rb')
     msg_image = MIMEImage(fp.read())
     fp.close()
     msg_image.add_header('Content-ID', '<image1>')
     msg.attach(msg_image)
+    msg_text = MIMEText(text, _format)
+    msg_alternative.attach(msg_text)
+    msg.attach(msg_text)
     return msg
 
 
