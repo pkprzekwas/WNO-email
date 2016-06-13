@@ -4,4 +4,4 @@ CONFIG = {
     'super-secret-pass': '<pass>',
 }
 
-TEXT = '<b>Lab WNO</b> Python/Image/Mail<br><img src="cid:image1"><br>Patryk Przekwas'
+TEXT = '<b>Lab WNO</b> Python/Image/Mail<br><img src="cid:image1"><br>WNO student'
