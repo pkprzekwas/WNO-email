@@ -34,7 +34,7 @@ def smtp_process(host, port, config, msg):
     except:
         return "Unsuccessful email sent"
 
-message = prepare_msg(TEXT, 'html', 'se.png')
+message = prepare_msg(TEXT, 'html', 'kotPaczy.png')
 status = smtp_process('smtp.gmail.com', 587, CONFIG, message)
 
 print(status)
